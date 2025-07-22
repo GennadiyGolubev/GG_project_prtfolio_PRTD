@@ -1,0 +1,38 @@
+### What's the distribution of customers across segments A, B, C, D?
+The customer distribution is fairly balanced across all four segments. Segment D has the largest share with 28% of customers, while Segment B is the smallest at 23%. The remaining two segments, A and C, account for 24% and 25% respectively.
+
+### 2 Which Profession is most popular for each customer segment?
+The profession “Artist” is the most common across Segments A, B, and C, with nearly 2,500 customers identifying with this occupation. In contrast, only Segment D has “Healthcare” as its dominant profession.
+
+### 3 What are the demographic characteristics of each segment?
+- **Gender:** Fairly even split in all segments, with a slight male majority. Segment D has the most pronounced skew, with 57% male.
+- **Age:** Clear variation across segments. Segment D is the youngest, averaging 32 years, while Segment C is the oldest, with an average age of 48.
+
+### 4 Which customer segment generates the highest average revenue per customer?
+Segment C leads with the highest average spending score. Roughly 20% of customers in this group are classified as “High” spenders. Segment B follows closely. Conversely, Segment D shows the lowest spending behavior, with a majority categorized as “Low” spenders.
+
+### 5 How does work experience correlate with spending behaviour across segments?
+There’s an inverse relationship: lower work experience tends to align with higher spending scores. Segment C, for example, combines the highest spending behavior with the lowest average work experience.
+
+### 6 What's the relationship between education level and customer segmentation?
+Education is a strong differentiator:
+- Segments A, B, and C are majority-educated, with Segment C reaching over 81%.
+- Segment D stands out as less educated, with more than 62% of its customers indicating they did **not** complete higher education.
+
+### 7 Which demographic factors are strongest predictors of high-value segments?
+Segments B and C are defined as high-value due to their high spending scores. Shared characteristics of these groups include:
+- Average age ~48 years
+- Family size of ~2 members
+- Work experience around 2.7 years
+    These demographics can help profile future high-value customers.
+
+### 8 What's the optimal customer profile for targeting in the new market?
+An ideal customer profile draws from Segments B and C:
+Educated, married professionals (primarily artists), aged around 48, with moderate work experience and high spending potential.
+Groups B and C
+
+### 9 How does marital status and family size impact spending patterns by segment?
+High-spending segments (B and C) have a ~75% marriage rate and an average family size of 2. In contrast, lower-spending segments (A and D) are younger, less likely to be married, and have smaller family sizes. Segment D, for instance, has only 25% of customers ever married.
+
+### 10 Which segments offer the best expansion opportunity based on customer characteristics?
+Segment **B** appears to offer the most promising growth potential. It combines mature, married, educated professionals—primarily artists—with high spending capacity and a solid demographic base. This makes it a strong candidate for first-priority targeting in new markets.
