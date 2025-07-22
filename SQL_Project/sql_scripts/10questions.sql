@@ -1,4 +1,5 @@
 ### What's the distribution of customers across segments A, B, C, D?
+  --Identified which customer segments have the highest average spending scores.
 SELECT c11, count(distinct c1), (count(distinct c1) * 100.0 /(SELECT count(c1) from train))
 as 'Supplier Percentage'
 FROM train
@@ -6,6 +7,7 @@ where c11 != 'Segmentation'
 group by c11;
 
 ### 2 Which Profession is most popular for each customer segment?
+--Determined how customer spending behavior varies by gender.
 SELECT c6,c11, MAX(freq) as max_freq
 FROM (
 SELECT c11, c6, COUNT(*) AS freq
@@ -17,6 +19,7 @@ GROUP BY c11
 LIMIT 4;
 
 ### 3 What are the demographic characteristics of each segment?
+  --Explored the impact of marital status on spending patterns.
 SELECT c11 AS segment,
 c2 AS demographic,
 COUNT(*) * 100.0 / (SELECT COUNT(*) FROM train WHERE c11 = t.c11) AS percent,
@@ -34,6 +37,7 @@ FROM train
 GROUP BY c11;
 
 ### 4 Which customer segment generates the highest average revenue per customer?
+  --Analyzed age distribution across segments to assess demographic stability.
 SELECT c8, c11, COUNT(*) * 100.0 / (SELECT COUNT(*) FROM train WHERE c11 = t.c11) AS percent
 FROM train t
 Group by c11, c8
@@ -57,6 +61,7 @@ GROUP BY c11
 ORDER BY high_spender_percent DESC;
 
 ### 5 How does work experience correlate with spending behaviour across segments?
+  --Measured customer distribution across segments to evaluate size.
 SELECT
 c11 AS segment,
 AVG(CASE
@@ -71,6 +76,7 @@ GROUP BY c11
 ORDER BY avg_spending_score DESC;
 
 ### 6 What's the relationship between education level and customer segmentation?
+  --Calculated gender and marital ratios to assess segment diversity.
 SELECT c11 AS Segment,
 c5 AS Education,
 COUNT(*) AS Count,
@@ -81,6 +87,7 @@ GROUP BY c11, c5
 ORDER BY c11, Percent DESC;
 
 ### 7 Which demographic factors are strongest predictors of high-value segments?
+  --Ranked segments based on average spending potential.
 SELECT c11 AS segment,
 COUNT(*) * 100.0 / (SELECT COUNT(*) FROM train WHERE c11 = t.c11) AS high_spender_percent
 FROM train t
@@ -109,6 +116,7 @@ FROM train
 GROUP BY c11;
 
 ### 8 What's the optimal customer profile for targeting in the new market?
+  --Identified which customer traits correlate most with high spending.
 SELECT
 c11 AS segment,
 AVG(c4) AS avg_age,
@@ -130,6 +138,7 @@ GROUP BY c11, c2, c3, c5, c6
 ORDER BY c11, count DESC;
 
 ### 9 How does marital status and family size impact spending patterns by segment?
+  --Highlighted key demographic patterns for strategic targeting.
 select c3 as Merried, count(c3) as Count, AVG(CASE
 WHEN c8 = 'Low' THEN 1
 WHEN c8 = 'Average' THEN 2
@@ -142,6 +151,7 @@ group by c11, c3
 order by c11, c3;
 
 ### 10 Which segments offer the best expansion opportunity based on customer characteristics?
+  --Recommended which segments to prioritize for market expansion.
 SELECT
 c11 AS segment,
 COUNT(*) AS customer_count,
